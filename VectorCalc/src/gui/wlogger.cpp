@@ -103,13 +103,13 @@ void WLogger::logError(const int no, const std::string& s) const
 void WLogger::addError(const QString& s)
 {
   setTextColor(Qt::red);
-  append(QString("ERROR: %1").arg(s));
+  append(QString(QStringLiteral("ERROR: %1")).arg(s));
 }
 
 void WLogger::addError(const int no, const QString& s)
 {
   setTextColor(Qt::red);
-  append(QString("ERROR:%1: %2").arg(no).arg(s));
+  append(QString(QStringLiteral("ERROR:%1: %2")).arg(no).arg(s));
 }
 
 void WLogger::addText(const QString& s)
@@ -121,11 +121,11 @@ void WLogger::addText(const QString& s)
 void WLogger::addWarning(const QString& s)
 {
   setTextColor(Qt::blue);
-  append(QString("WARNING: %1").arg(s));
+  append(QString(QStringLiteral("WARNING: %1")).arg(s));
 }
 
 void WLogger::addWarning(const int no, const QString& s)
 {
   setTextColor(Qt::blue);
-  append(QString("WARNING:%1: %2").arg(no).arg(s));
+  append(QString(QStringLiteral("WARNING:%1: %2")).arg(no).arg(s));
 }

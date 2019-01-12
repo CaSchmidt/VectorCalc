@@ -77,7 +77,7 @@ QVariant EnvironmentModel::headerData(int section, Qt::Orientation orientation, 
 {
   if( role == Qt::DisplayRole ) {
     if(        orientation == Qt::Horizontal ) {
-      return QString("[%1]").arg(section);
+      return QString(QStringLiteral("[%1]")).arg(section);
     } else if( orientation == Qt::Vertical ) {
       return _vars.at(section).name;
     }
@@ -129,6 +129,6 @@ void EnvironmentModel::on_VariableChange(const AST::IdentifierType& /*name*/)
 QStringList EnvironmentModel::fields(const QString& name) const
 {
   const std::string value = print(name.toStdString());
-  return QString::fromStdString(value).split(QRegExp("\\s+"),
+  return QString::fromStdString(value).split(QRegExp(QStringLiteral("\\s+")),
                                              QString::SkipEmptyParts);
 }

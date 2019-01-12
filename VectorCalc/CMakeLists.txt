@@ -89,6 +89,8 @@ set(VectorCalc_SOURCES
 
 ### Target ###################################################################
 
+add_definitions(-DQT_NO_CAST_FROM_ASCII -DQT_NO_CAST_TO_ASCII)
+
 add_executable(VectorCalc
   ${VectorCalc_HEADERS} ${VectorCalc_SOURCES}
   ${BISON_AST_Parser_OUTPUTS} ${FLEX_AST_Scanner_OUTPUTS}

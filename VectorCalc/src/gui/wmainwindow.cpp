@@ -54,12 +54,12 @@ WMainWindow::WMainWindow(QWidget *parent, Qt::WindowFlags flags)
 
   // Fonts ///////////////////////////////////////////////////////////////////
 
-  QFontDatabase::addApplicationFont(":/fonts/SourceCodePro-Bold.ttf");
-  QFontDatabase::addApplicationFont(":/fonts/SourceCodePro-It.ttf");
-  QFontDatabase::addApplicationFont(":/fonts/SourceCodePro-Regular.ttf");
+  QFontDatabase::addApplicationFont(QStringLiteral(":/fonts/SourceCodePro-Bold.ttf"));
+  QFontDatabase::addApplicationFont(QStringLiteral(":/fonts/SourceCodePro-It.ttf"));
+  QFontDatabase::addApplicationFont(QStringLiteral(":/fonts/SourceCodePro-Regular.ttf"));
 
   QFontDatabase db;
-  const QFont f = db.font("Source Code Pro", "Regular", 10);
+  const QFont f = db.font(QStringLiteral("Source Code Pro"), QStringLiteral("Regular"), 10);
   ui->inputEdit->setFont(f);
   ui->logBrowser->setFont(f);
 
