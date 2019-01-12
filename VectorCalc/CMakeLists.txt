@@ -22,7 +22,7 @@ set(CMAKE_AUTOUIC ON)
 set(CMAKE_AUTOUIC_SEARCH_PATHS ${CMAKE_CURRENT_SOURCE_DIR}/forms)
 find_package(Qt5Widgets 5.6 REQUIRED)
 
-add_subdirectory(../../../../csUtil
+add_subdirectory(../csUtil/csUtil
   ${CMAKE_CURRENT_BINARY_DIR}/csUtil
   )
 
